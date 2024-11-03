@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* dark green */
+  --color_1: #042a2b;
+  /* moonstone */
+  --color_2: #5eb1bf;
+  /* cyan */
+  --color_3: #54f2f2;
+  /* white */
+  --color_4: #fcfcfc;
+  /* maize */
+  --color_5: #f4e04d;
+  --btn_size: 40px;
+}
+
+body {
+  background-color: var(--color_1);
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 5px;
+}
+
+button {
+  height: var(--btn_size);
+  width: var(--btn_size);
+  font-size: 18px;
+  background-color: var(--color_2);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button i {
+  pointer-events: none;
+}
+
+.active {
+  color: var(--color_5);
+}
+
+input {
+  height: var(--btn_size);
+  width: calc(var(--btn_size) * 1.5);
+  font-size: 16px;
+}
+
+/* image div */
+#tileset_view {
+  width: 100%;
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  display: flex;
+  /* background-color: var(--color_4); */
+}
+
+/* image grid */
+.col {
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.cell {
+  /* border: 1px solid var(--color_5); */
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* font-size: 14px; */
+  /* color: #000000; */
+  padding: 1px;
+}
+
+/* setting left side panel - hidden => click setting btn to open */
+
+.settings {
+  position: absolute;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(4, 42, 43, 0.8);
+  left: -200px;
+  transition: left 0.5s linear 0s;
+  padding: 5px;
+  border: 1px solid rgba(94, 177, 191, 0.3);
+}
+
+.settings h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color_4);
+  border-bottom: 1px solid rgba(244, 224, 77, 0.7);
+  padding-bottom: 5px;
+}
+
+.settings_p {
+  color: var(--color_4);
+}
+
+/* toggle class for settings div */
+.left {
+  left: 0px;
+}
+
+.settings_div_input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.4);
+}
+
+/* menu div */
+
+#upload {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* .upload_button i {
+  pointer-events: none;
+} */
+
+.upload_button label {
+  padding: 12px;
+  cursor: pointer;
+}
